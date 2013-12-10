@@ -1,7 +1,8 @@
 <ul class="artist_list">
   <% @all_artists.each do |artist|%>
     <li>
-      <a href="/<%= artist.name %>"><%= artist.name %></a> -- <%= artist.songs_count %> Songs
+      <% @count = artist.songs_count %>
+      <a href="/<%= artist.name %>"><%= artist.name %></a> -- <%= @count %> <%= artist.song_word(@count)%>
     </li>
   <% end %>
 </ul>
