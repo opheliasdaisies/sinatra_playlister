@@ -10,7 +10,7 @@ module Playlist
   class PlaylisterApp < Sinatra::Application
 
     before do
-      @playlist = Playlister.new(Parser.new("data").song_list)
+      @playlist = Playlister.new(Parser.new("./public/data").song_list)
     end
 
     get "/" do
