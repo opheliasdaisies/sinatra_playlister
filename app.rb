@@ -17,5 +17,21 @@ module Playlist
       erb :select
     end
 
+    get "/artists" do
+      @all_artists = Artist.all
+
+      erb :artists
+    end
+
+    get "/genres" do
+
+    end
+
+    get "/artists/:name" do
+      @artist_name = proc[:name].to_s
+
+      erb :artist_profile
+    end
+
   end
 end
