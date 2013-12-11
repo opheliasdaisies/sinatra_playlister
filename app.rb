@@ -46,13 +46,6 @@ module Playlist
       erb :genre_profile
     end
 
-
-        # puts "The #{genre.name.capitalize} genre has #{genre.songs.length} Songs and #{genre.artists.length} Artists:"
-        # genre.songs.each do |song|
-        #   puts "#{genre.songs.index(song)+1}. #{song.name} -- #{song.artist.name}"
-        # end
-        # return true
-
     helpers do
       def pluralize(word, count)
         count > 1 ? word + "s" : word
