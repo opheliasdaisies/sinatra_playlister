@@ -1,7 +1,10 @@
-<ul class="artist_list">
-  <% @all_artists.each do |artist|%>
-    <li>
-      <a href="/artists/<%= artist.name %>"><%= artist.name %></a> -- <%= artist.songs_count %> <%= pluralize("Song", artist.songs_count) %>
-    </li>
-  <% end %>
-</ul>
+<div class="artist">
+  <div class="category">All Artists</div>
+  <ul class="list">
+    <% @all_artists.each do |artist|%>
+      <li>
+        <a href="/artists/<%= artist.name %>"><%= artist.name %></a> -- <%= artist.songs_count %> <%= pluralize("Song", artist.songs_count) %>
+      </li>
+    <% end %>
+  </ul>
+</div>

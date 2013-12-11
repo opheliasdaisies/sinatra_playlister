@@ -1,6 +1,8 @@
 body {
   font-family: 'Denk One', sans-serif;
   background-color: #FF80DC;
+  margin-top: -20px;
+  font-size: 14px
 }
 
 h1 {
@@ -13,36 +15,48 @@ h1 {
 a {
   text-decoration: none;
   color: #138F00;
+  font-size: 20px;
 }
 
 a:hover {
   color: #23FF00;
 }
 
+ul {
+  margin-top: -10px;
+}
+
+li {
+  padding: 5px;
+  list-style-type: none
+}
+
 .header {
   background-color: #23FF00;
-  padding: 20px 0 0;
+  padding: 50px 0 0;
   position: fixed;
   width: 100%;
+  z-index: 1
 }
 
 .content {
-  position: fixed;
-  top: 150px;
+  position: relative;
+  top: 183px;
   width: 100%;
   height: auto;
-  min-height: 2000px;
+  min-height: 300px;
 }
 
 .nav {
   position: absolute;
-  top: 55px;
+  top: 75px;
   width: 100%;
 }
 
 .nav a {
   color: #90AF37;
   text-decoration: none;
+  font-size: 16px;
 }
 
 .nav a:hover {
@@ -59,7 +73,12 @@ a:hover {
   right: 15%;
 }
 
-.content a {
+.artists a {
+  font-size: 100px;
+  font-family: 'Cantata One', serif;
+}
+
+.genres a {
   font-size: 100px;
   font-family: 'Cantata One', serif;
 }
@@ -69,8 +88,9 @@ a:hover {
   height: 100%;
   width: 50%;
   background-color: #FF8089;
-  position:absolute;
+  position:fixed;
   left: 0;
+  top: 130px;
   text-align: center;
 }
 
@@ -79,7 +99,30 @@ a:hover {
   height: 100%;
   width: 50%;
   background-color: #DEFF80;
-  position:absolute;
+  position:fixed;
   right: 0;
+  top: 130px;
   text-align: center;
+}
+
+.artist {
+  background-color: #FF8089;
+}
+
+.genre {
+  background-color: #DEFF80;
+}
+
+.list {
+  /*padding: 40px 0;*/
+  text-align: center;
+  min-height: 400px
+}
+
+.category {
+  padding: 20px;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Cantata One', serif;
+  color: #6A8F00;
 }
