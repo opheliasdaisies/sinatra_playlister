@@ -6,13 +6,80 @@ body {
 h1 {
   margin-top: 0;
   color: #FF8089;
+  text-align: center;
+  font-size: 70px;
+}
+
+a {
+  text-decoration: none;
+  color: #138F00;
+}
+
+a:hover {
+  color: #23FF00;
 }
 
 .header {
   background-color: #23FF00;
-  padding: 20px;
+  padding: 20px 0 0;
+  position: fixed;
+  width: 100%;
 }
 
 .content {
-  padding: 20px;
+  position: fixed;
+  top: 150px;
+  width: 100%;
+  height: auto;
+  min-height: 2000px;
+}
+
+.nav {
+  position: absolute;
+  top: 55px;
+  width: 100%;
+}
+
+.nav a {
+  color: #90AF37;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: #FFE6E7;
+}
+
+.artist_nav {
+  position: absolute;
+  left: 15%;
+}
+
+.genre_nav {
+  position: absolute;
+  right: 15%;
+}
+
+.content a {
+  font-size: 100px;
+  font-family: 'Cantata One', serif;
+}
+
+.artists {
+  padding-top: 100px;
+  height: 100%;
+  width: 50%;
+  background-color: #FF8089;
+  position:absolute;
+  left: 0;
+  text-align: center;
+}
+
+.genres {
+  padding-top: 100px;
+  height: 100%;
+  width: 50%;
+  background-color: #DEFF80;
+  position:absolute;
+  right: 0;
+  text-align: center;
 }
