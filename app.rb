@@ -37,12 +37,21 @@ module Playlist
       erb :artist_profile
     end
 
-    # get "/genres/:name" do
-    #   @genre_name = params[:name].to_s
+    get "/genres/:name" do
+      genre_name = params[:name]
+      @genre = @playlist.genre_match(genre_name)
+      @song_or_songs = pluralize("Song", @genre.song_count)
+      @artist_or_artists = pluralize("Artist", @genre.artist_count)
 
-    #   erb :genre_profile
-    # end
+      erb :genre_profile
+    end
 
+
+        # puts "The #{genre.name.capitalize} genre has #{genre.songs.length} Songs and #{genre.artists.length} Artists:"
+        # genre.songs.each do |song|
+        #   puts "#{genre.songs.index(song)+1}. #{song.name} -- #{song.artist.name}"
+        # end
+        # return true
 
     helpers do
       def pluralize(word, count)

@@ -1,0 +1,21 @@
+<div class="category">
+  <%= @genre.name %> Songs
+</div>
+<div class="subcategory">
+  -- <%= @genre.song_count %> <%= @song_or_songs %> 
+  -- <%= @genre.artist_count %> <%= @artist_or_artists %> 
+</div>
+<div class="info">
+  <ul><% @genre.songs.each do |song| %>
+    <li>
+      <%= @genre.songs.index(song) + 1 %>. 
+      <a href="/songs/<%= song.name %>"><%= song.name %></a> 
+      -- 
+      <a href="/artists/<%= song.artist.name %>"><%= song.artist.name %></a>
+    </li>
+    <% end %>
+  </ul>
+</div>
+
+
+
