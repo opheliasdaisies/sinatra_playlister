@@ -30,10 +30,18 @@ module Playlist
     end
 
     get "/artists/:name" do
-      @artist_name = proc[:name].to_s
-
+      artist_name = params[:name]
+      @artist = @playlist.artist_match(artist_name)
+      @song_or_songs = pluralize("Song", @artist.songs_count)
+      
       erb :artist_profile
     end
+
+    # get "/genres/:name" do
+    #   @genre_name = params[:name].to_s
+
+    #   erb :genre_profile
+    # end
 
 
     helpers do

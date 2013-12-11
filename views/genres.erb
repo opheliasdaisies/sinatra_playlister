@@ -1,7 +1,7 @@
 <ul class="artist_list">
   <% @all_genres.each do |genre|%>
     <li>
-      <a href="/<%= genre.name %>"><%= genre.name.capitalize %></a>: <%= genre.song_count %> <%= pluralize("Song", genre.song_count) %>, <%=genre.artist_count %> <%= pluralize("Artist", genre.artist_count) %>
+      <a href="/genres/<%= genre.name %>"><%= genre.name.capitalize %></a>: <%= genre.song_count %> <%= pluralize("Song", genre.song_count) %>, <%=genre.artist_count %> <%= pluralize("Artist", genre.artist_count) %>
     </li>
   <% end %>
 </ul>
