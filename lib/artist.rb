@@ -12,9 +12,9 @@ class Artist
     ARTISTS << self
   end
  
-  def song_word(count)
-    count > 1 ? "Songs" : "Song"
-  end
+  # def song_word(count)
+  #   count > 1 ? "Songs" : "Song"
+  # end
 
   def self.reset_artists
     ARTISTS.clear

@@ -18,4 +18,12 @@ class Genre
     GENRES.clear
   end
 
+  def song_count
+    songs.length
+  end
+
+  def artist_count
+    artists.length
+  end
+
 end

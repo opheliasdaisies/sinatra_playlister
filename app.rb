@@ -24,13 +24,22 @@ module Playlist
     end
 
     get "/genres" do
+      @all_genres = Genre.all.sort_by { |genre| genre.songs.length}.reverse
 
+      erb :genres
     end
 
     get "/artists/:name" do
       @artist_name = proc[:name].to_s
 
       erb :artist_profile
+    end
+
+
+    helpers do
+      def pluralize(word, count)
+        count > 1 ? word + "s" : word
+      end
     end
 
   end
