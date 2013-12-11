@@ -1,7 +1,7 @@
 <ul class="artist_list">
   <% @all_artists.each do |artist|%>
     <li>
-      <a href="/<%= artist.name %>"><%= artist.name %></a> -- <%= artist.songs_count %> <%= pluralize("Song", artist.songs_count) %>
+      <a href="/artists/<%= artist.name %>"><%= artist.name %></a> -- <%= artist.songs_count %> <%= pluralize("Song", artist.songs_count) %>
     </li>
   <% end %>
 </ul>
