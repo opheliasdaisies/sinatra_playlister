@@ -2,13 +2,20 @@
 <html>
   <head>
     <title>Extreme Playlister</title>
+    <link href="/styles/normalize.css" type="text/css" rel="stylesheet"/>
+    <link href="/styles/style.css" type="text/css" rel="stylesheet"/>
+    <link href='http://fonts.googleapis.com/css?family=Denk+One' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <h1>Playlister!</h1>
-    <div class="nav">
-      <a href="/artists">List All Artists</a>
-      <a href="/genres">List All Genres</a>
-    </nav>
-    <%= yield %>
+    <div class="header">
+      <h1>Playlister!</h1>
+      <div class="nav">
+        <a href="/artists">List All Artists</a>
+        <a href="/genres">List All Genres</a>
+      </div>
+    </div>
+    <div class="content">
+      <%= yield %>
+    </div>
   </body>
 </html>

@@ -1,0 +1,18 @@
+body {
+  font-family: 'Denk One', sans-serif;
+  background-color: #FF80DC;
+}
+
+h1 {
+  margin-top: 0;
+  color: #FF8089;
+}
+
+.header {
+  background-color: #23FF00;
+  padding: 20px;
+}
+
+.content {
+  padding: 20px;
+}
