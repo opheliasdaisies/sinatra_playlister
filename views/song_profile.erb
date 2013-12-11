@@ -1,0 +1,13 @@
+<div class="category">
+  <%= @song.name %>
+</div>
+<div class="info">
+  <ul>
+    <li>Artist: 
+      <a href="/artists/<%= @song.artist.name %>"><%= @song.artist.name %></a> 
+    </li>
+    <li>Genre: 
+      <a href="/genres/<%= @song.genre.name %>"><%= @song.genre.name.capitalize %></a> 
+    </li>
+  </ul>
+</div>

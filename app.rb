@@ -46,6 +46,13 @@ module Playlist
       erb :genre_profile
     end
 
+    get "/songs/:name" do
+      song_name = params[:name]
+      @song = @playlist.song_match(song_name)
+      
+      erb :song_profile
+    end
+
     helpers do
       def pluralize(word, count)
         count > 1 ? word + "s" : word
