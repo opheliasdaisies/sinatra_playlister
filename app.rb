@@ -57,7 +57,11 @@ module Playlist
       @search_term = params["search"]
       @results = search(@search_term)
       
-      erb :search
+      if @results.length == 0
+        erb :no_results
+      else
+        erb :search
+      end
     end
 
     helpers do

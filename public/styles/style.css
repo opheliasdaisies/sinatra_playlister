@@ -164,3 +164,12 @@ button:focus {
   font-family: 'Cantata One', serif;
   color: #6A8F00;
 }
+
+.none {
+  padding-top: 50px;
+  left: 0;
+  top: 130px;
+  text-align: center;
+  font-size: 45px;
+  color: #FF0013;
+}
