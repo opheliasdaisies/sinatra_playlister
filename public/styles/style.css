@@ -7,6 +7,16 @@ body {
   font-size: 14px
 }
 
+h1 {
+  margin-top: 0;
+  text-align: center;
+}
+
+h1 a, h1 a:hover{
+  color: #FF8089;
+  font-size: 70px;
+}
+
 a {
   text-decoration: none;
   color: #138F00;
@@ -15,16 +25,6 @@ a {
 
 a:hover {
   color: #23FF00;
-}
-
-h1 {
-  margin-top: 0;
-  text-align: center;
-}
-
-h1 a, a:hover{
-  color: #FF8089;
-  font-size: 70px;
 }
 
 ul {
@@ -60,6 +60,11 @@ button {
   background-color: #90AF37;
   border-radius: 10px;
   color: #BEFF00;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 .header {

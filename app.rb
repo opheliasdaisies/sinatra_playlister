@@ -53,9 +53,27 @@ module Playlist
       erb :song_profile
     end
 
+    post "/search" do
+      @search_term = params["search"]
+      @results = search(@search_term)
+      
+      erb :search
+    end
+
     helpers do
       def pluralize(word, count)
         count > 1 ? word + "s" : word
+      end
+
+      def search(word)
+        results = []
+        word_to_find = word.downcase
+        @playlist.all_songs.each do |item|
+          if item.name.downcase.include?(word_to_find) || item.artist.name.downcase.include?(word_to_find) || item.genre.name.downcase.include?(word_to_find)
+            results << "<a href='/songs/#{item.name}'>#{item.name}</a> by <a href='/artists/#{item.artist.name}'>#{item.artist.name}</a>"
+          end
+        end
+        results
       end
     end
 
