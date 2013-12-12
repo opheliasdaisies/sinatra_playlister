@@ -1,15 +1,10 @@
+/*color scheme: http://colorschemedesigner.com/#5341X----De--*/
+
 body {
   font-family: 'Denk One', sans-serif;
   background-color: #FF80DC;
   margin-top: -20px;
   font-size: 14px
-}
-
-h1 {
-  margin-top: 0;
-  color: #FF8089;
-  text-align: center;
-  font-size: 70px;
 }
 
 a {
@@ -22,6 +17,16 @@ a:hover {
   color: #23FF00;
 }
 
+h1 {
+  margin-top: 0;
+  text-align: center;
+}
+
+h1 a, a:hover{
+  color: #FF8089;
+  font-size: 70px;
+}
+
 ul {
   margin-top: -10px;
 }
@@ -29,6 +34,32 @@ ul {
 li {
   padding: 5px;
   list-style-type: none
+}
+
+form {
+  position: absolute;
+  right: 5%;
+  top: 10px;
+}
+
+label {
+  color: #90AF37;
+}
+
+input {
+  border-radius: 10px;
+  padding-left: 7px;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+button {
+  background-color: #90AF37;
+  border-radius: 10px;
+  color: #BEFF00;
 }
 
 .header {
@@ -51,6 +82,7 @@ li {
   position: absolute;
   top: 75px;
   width: 100%;
+  height: 45px;
 }
 
 .nav a {
@@ -70,7 +102,8 @@ li {
 
 .genre_nav {
   position: absolute;
-  right: 15%;
+  left: 15%;
+  top: 20px;
 }
 
 .artists a {
